@@ -1,0 +1,208 @@
+{
+    "type": "event-data",
+    "payload": {
+        "id": "895cc4a0-9e7f-4bca-9d11-660f43b228d3",
+        "category": {
+            "id": "905b629d-35d3-4a8c-98f8-6541d92cfc89",
+            "slug": "hockey",
+            "translations": [ ]
+        },
+        "competitors": [
+            {
+                "id": "ea84d7c4-3977-415d-a779-8fb1c7a08e5d",
+                "name": "Washington Capitals",
+                "score": 7,
+                "translations": [ ]
+            },
+            {
+                "id": "ea761599-c6ab-4121-ab3c-02b5d0f981bf",
+                "name": "Chicago Blackhawks",
+                "score": 9,
+                "translations": [ ]
+            }
+        ],
+        "markets": [],
+        "startTime": "2022-08-31T11:13:24.034Z",
+        "updatedAt": "2022-08-31T11:38:06.587Z",
+        "oldMarkets": [
+            {
+                "id": "dd90d54d-6b74-4293-892d-3c5dc30b6dab",
+                "name": "1x2",
+                "selections": [
+                    {
+                        "id": "144edbc0-e771-436d-80ca-593f9ee23dc0",
+                        "name": "1st win",
+                        "odds": 9.90000678337746
+                    },
+                    {
+                        "id": "5dd0b947-b3de-43bc-b6b9-a4809873373c",
+                        "name": "Draw",
+                        "odds": null
+                    },
+                    {
+                        "id": "3459e279-6032-4c70-bb0c-75d6a1a47f24",
+                        "name": "2nd win",
+                        "odds": 10.614989862267016
+                    }
+                ],
+                "translations": [ ]
+            },
+            {
+                "id": "b0ccf217-2349-4284-b87f-5a7cab98ba29",
+                "name": "handicap",
+                "selections": [
+                    {
+                        "id": "4805a49d-fc95-4731-9de3-37d922c2ef32",
+                        "name": "-0.5",
+                        "odds": 4.888624918679358
+                    },
+                    {
+                        "id": "acb21077-778c-4555-8dee-f03b971a89c1",
+                        "name": "+0.5",
+                        "odds": null
+                    }
+                ],
+                "translations": [ ]
+            },
+            {
+                "id": "531569ab-9732-4f60-954d-4b8a0cd0a4df",
+                "name": "total",
+                "selections": [
+                    {
+                        "id": "73057c2a-1b9e-40b8-abe7-c9ee372a33e6",
+                        "name": "o1/1.5",
+                        "odds": 9.090821587403376
+                    },
+                    {
+                        "id": "abd3df3d-d0fc-4b99-b7be-358486b7b05a",
+                        "name": "o1.5/2.0",
+                        "odds": null
+                    },
+                    {
+                        "id": "2fdba752-fbce-407e-a9a9-3a354e2b978c",
+                        "name": "o2.0/2.5",
+                        "odds": null
+                    },
+                    {
+                        "id": "9f1f1d85-de6f-41e7-b6b6-8836f9ad15ce",
+                        "name": "o2.5/3.0",
+                        "odds": 4.210099453214818
+                    },
+                    {
+                        "id": "58250963-1b74-49c6-a561-894309d061ee",
+                        "name": "o3.0/3.5",
+                        "odds": 10.531309964999753
+                    },
+                    {
+                        "id": "7557ac20-6a29-435f-ab94-1633af5b1373",
+                        "name": "o3.5/4.0",
+                        "odds": 2.4249852962592513
+                    }
+                ],
+                "translations": [ ]
+            },
+            {
+                "id": "effca4a0-4b87-45ec-8ccf-70dcf2dd7584",
+                "name": "correctScore",
+                "selections": [
+                    {
+                        "id": "197433c0-ee8e-4b3e-851e-0c9010ec45b8",
+                        "name": "0-0",
+                        "odds": null
+                    },
+                    {
+                        "id": "827af5a3-515a-4dfe-90d8-97519e2f1c6e",
+                        "name": "1-0",
+                        "odds": 8.253996250545836
+                    },
+                    {
+                        "id": "c7a8f93f-ae03-499e-aeda-c1a7a96c3fb2",
+                        "name": "2-0",
+                        "odds": 6.6727849064796
+                    },
+                    {
+                        "id": "52f1ee52-0049-4bcd-a3d7-05e8dc2a4dc6",
+                        "name": "3-0",
+                        "odds": null
+                    },
+                    {
+                        "id": "5dbe45e2-50d2-46e5-93d5-1b2d7bf834ee",
+                        "name": "4-0",
+                        "odds": 4.768157553524909
+                    },
+                    {
+                        "id": "1a288232-1d64-4657-8fde-b59b1c290003",
+                        "name": "0-1",
+                        "odds": null
+                    },
+                    {
+                        "id": "bad0a08a-7f52-4553-a5ca-a37b82eb6075",
+                        "name": "0-2",
+                        "odds": null
+                    },
+                    {
+                        "id": "23707fd9-179a-4862-aa40-1b3349da9a91",
+                        "name": "0-3",
+                        "odds": null
+                    },
+                    {
+                        "id": "d2415ff6-99d1-4ebb-ac51-c347fc8632a4",
+                        "name": "0-4",
+                        "odds": 9.462808505343556
+                    },
+                    {
+                        "id": "8a081b93-9622-479e-b017-3055d3d76e98",
+                        "name": "1-1",
+                        "odds": 5.433183643156973
+                    },
+                    {
+                        "id": "11450811-8b8c-4fb6-a518-f98e10365d8e",
+                        "name": "1-2",
+                        "odds": 2.9270895998171955
+                    },
+                    {
+                        "id": "aba53f5f-908c-4c73-979c-edd04db851cf",
+                        "name": "1-3",
+                        "odds": null
+                    },
+                    {
+                        "id": "c861a546-756e-4224-8850-c4923bdec899",
+                        "name": "1-4",
+                        "odds": null
+                    },
+                    {
+                        "id": "bf406441-3101-47b9-bf6c-2e429ac51c4c",
+                        "name": "2-2",
+                        "odds": 5.838095495609249
+                    },
+                    {
+                        "id": "350b3bed-3e9c-4249-9c93-34d0991b053c",
+                        "name": "2-3",
+                        "odds": null
+                    },
+                    {
+                        "id": "49ab0f35-5072-46d4-b397-a91dbeba7fda",
+                        "name": "2-4",
+                        "odds": 2.1625940722333916
+                    },
+                    {
+                        "id": "ecc7486b-a1be-48c9-9cca-7d74bf3aee61",
+                        "name": "3-3",
+                        "odds": null
+                    },
+                    {
+                        "id": "6b73e0c9-7de8-4dac-a4ab-6b4b27160957",
+                        "name": "3-4",
+                        "odds": 7.890012146240467
+                    },
+                    {
+                        "id": "810d1dc2-6580-4f7b-8e00-351a874000a3",
+                        "name": "4-4",
+                        "odds": null
+                    }
+                ],
+                "translations": [ ]
+            }
+        ]
+    }
+}
