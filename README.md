@@ -1,6 +1,4 @@
 - store data in db, if type = 'event-update', publish via websocket, else store in db.
-- connect gql server with UI via subscription
 - handle edge cases on UI
-- WTH are those blocks????
-- wite unit tests for both UI & B.E.
+- wite unit tests for both UI & B.E.??
 - dockerize maybe???
