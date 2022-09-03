@@ -31,9 +31,12 @@ const pubsub = new PubSub();
     wsDataService.onMessage((data) => {
       try {
         // if (data.type == "event-update") {
-          pubsub.publish(NEW_DATA, {
-            sportScoreDataUpdated: data
-          });
+        if(data.type){
+        console.log(data.type)
+        pubsub.publish(NEW_DATA, {
+          sportScoreDataUpdated: data
+        });
+      }
         // }
         // STORE recovery data into some persistant storage. e.g. file// db will be easier though
         //  else if (data.type = "event-data") {

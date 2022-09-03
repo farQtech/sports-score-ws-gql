@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScoreCard } from './scoreCard';
-// import { useGetAllSportsDataQuery } from '../generated/graphql';
+import { gql, useSubscription } from '@apollo/client';
+import { SCORE_UPDATED_SUBSCRIPTION } from './gql/subscriptions';
 
 export const ScoreBoard = () => {
 
-    // const { data, error, loading } = useGetAllSportsDataQuery();
+    const {error, loading, data} = useSubscription(SCORE_UPDATED_SUBSCRIPTION, {
+        onSubscriptionData: (data) => {
+            console.log('subs', data)
+        }
+    });
+    
+    // const [scoreUpdated, setScore] = useState([]);
+
+    // useEffect(() => {
+    //     // setScore(data?)
+    //     console.log(data)
+    // }, [data]);
     
     return (
         <>

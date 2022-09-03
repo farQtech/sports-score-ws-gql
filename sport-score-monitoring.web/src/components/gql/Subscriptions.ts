@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const SCORE_UPDATED_SUBSCRIPTION = gql`
-subscription{
+subscription {
   sportScoreDataUpdated {
     payload {
         category {

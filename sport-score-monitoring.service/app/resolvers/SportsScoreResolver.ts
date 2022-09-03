@@ -12,6 +12,9 @@ const SportScoreResolvers = {
   },
   Query: {
     getAllMockSportScoreData: (parent: any, args: any, { pubsub }: any) => {
+      pubsub.publish(NEW_DATA, {
+        sportScoreDataUpdated: Data[0]
+      });
       return Data;
     },
     getMockSportScoreData: (_: any, args: any) => { 
