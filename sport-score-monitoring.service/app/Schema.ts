@@ -1,4 +1,6 @@
-import { gql } from "apollo-server-express"; //will create a schema
+import { gql } from "apollo-server-express";
+
+// type defs for the application
 
 const Schema = gql`
   type Selections {
@@ -27,7 +29,7 @@ type Category {
   translations: [String]
 }
 
-type Payload {
+type SportScoreInfo {
   id: ID!
   startTime: String
   updatedAt: String
@@ -37,19 +39,19 @@ type Payload {
   category: Category
 }
 
-type SportScoreData {
+# root object
+type NewScoreEvent {
   type: String
-  payload: Payload
+  payload: SportScoreInfo
 }
 
   type Query {
-    getAllSportsData: [SportScoreData]
-    getSportData(id: String): SportScoreData
-    payload: Payload
-    category: Category
-    competitors: Competitors
-    markets: Markets
-    selections: Selections
+    getAllMockSportScoreData: [NewScoreEvent]
+    getMockSportScoreData(id: String): NewScoreEvent
+  }
+
+  type Subscription {
+    sportScoreDataUpdated: NewScoreEvent!
   }
 `;
 
