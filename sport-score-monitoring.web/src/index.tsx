@@ -5,21 +5,36 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloClient, ApolloProvider, InMemoryCache, HttpLink, from } from '@apollo/client';
+
+import { onError } from '@apollo/client/link/error';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const errorLink = onError(({ graphQLErrors }) => {
+  if (graphQLErrors) {
+    graphQLErrors.map(({ message }) => {
+      console.log(message)
+    });
+  }
+});
+
+const link = from([
+  errorLink,
+  new HttpLink({ uri: 'http://localhost:4000/graphql' }),
+]);
+
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  link: link,
   cache: new InMemoryCache(),
 });
 
 root.render(
   <ApolloProvider client={client}>
     <App />
-    </ApolloProvider>
+  </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
