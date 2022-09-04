@@ -1,3 +1,2 @@
 - handle edge cases on UI
-- wite unit tests for both UI & B.E.??
 - dockerize maybe???
