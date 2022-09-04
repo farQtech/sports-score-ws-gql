@@ -1,0 +1,2 @@
+- handle edge cases on UI
+- dockerize maybe???
