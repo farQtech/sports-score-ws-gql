@@ -61,12 +61,6 @@ it("runs getMockSportScoreData query on schema", async () => {
     expect(competitor).toHaveProperty('name');
     expect(competitor).toHaveProperty('score');
 
-    // expect(queryResult.markets).toHaveProperty('name');
-    // expect(queryResult.markets.selections).toHaveProperty('name');
-    // expect(queryResult.markets.selections).toHaveProperty('odds');
-    // expect(queryResult.oldMarkets).toHaveProperty('name');
-    // expect(queryResult.markets.oldMarkets).toHaveProperty('name');
-    // expect(queryResult.markets.oldMarkets).toHaveProperty('odds');
     expect(queryResult).toHaveProperty('startTime');
     expect(queryResult).toHaveProperty('updatedAt');
 
