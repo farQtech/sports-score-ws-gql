@@ -14,21 +14,21 @@ class WsDataService {
     public openConnection() {
         this.client.ws.on('open', () => {
             // check if file exists
-            fs.exists(this.fileStoragePath, (exists: any) => {
-                if (exists) {
-                    fs.readFile(this.fileStoragePath, (err: any, data: any) => {
-                        if (err) console.log('error', JSON.parse(err));
+            // fs.exists(this.fileStoragePath, (exists: any) => {
+            //     if (exists) {
+            //         fs.readFile(this.fileStoragePath, (err: any, data: any) => {
+            //             if (err) console.log('error', JSON.parse(err));
                         
-                        // check if file contains data
-                        if ( Object.keys(JSON.parse(data)).length < 1 ) {
-                            console.log('file storage is empty, trigerring recovery\n');
-                            // if file is not present fetch and save recovery event data
-                            this.sendRecovery();
-                        }
-                    });
-                } else // if file is not present fetch and save recovery event data
-                    this.sendRecovery();
-            })
+            //             // check if file contains data
+            //             if ( Object.keys(JSON.parse(data)).length < 1 ) {
+            //                 console.log('file storage is empty, trigerring recovery\n');
+            //                 // if file is not present fetch and save recovery event data
+            //                 this.sendRecovery();
+            //             }
+            //         });
+            //     } else // if file is not present fetch and save recovery event data
+            //         this.sendRecovery();
+            // })
         });
     }
 

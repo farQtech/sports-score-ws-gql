@@ -2,5 +2,25 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: rgb(9, 14, 47);
+  background-color: #9DA9F3;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #2f2f2e;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #e0cbcb;
+  border-radius: 100vh;
+  border: 3px solid #2f2f2e;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b9;
 }

@@ -11,9 +11,6 @@ import { WebSocketServer } from 'ws';
 
 import WsDataService from "../services/wsDataSservice";
 
-const fs = require('fs');
-
-
 const pubsub = new PubSub();
 
 
@@ -32,6 +29,7 @@ export function listenOnWebSocket(db: any) {
     try {
       if (data.toString() === "Connection susccess. Listening to incoming messages...") return;
       let parsedData = JSON.parse(data.toString());
+
       // publish subscription event in case of update event.
       if (parsedData.type == "event-update") {
         pubsub.publish(NEW_DATA, {

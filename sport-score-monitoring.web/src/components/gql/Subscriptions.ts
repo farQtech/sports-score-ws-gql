@@ -3,37 +3,26 @@ import { gql } from '@apollo/client';
 export const SCORE_UPDATED_SUBSCRIPTION = gql`
 subscription {
   sportScoreDataUpdated {
-    payload {
-        category {
+      category {
+        id,
+        slug
+      },
+      competitors {
+        id,
+        name,
+        score
+      },
+      markets {
+        id,
+        name,
+        selections {
           id,
-          slug
-        },
-        category {
-          id,
-          slug
-        },
-        competitors {
-          id, 
           name,
-          score
-        },
-        markets {
-          name,
-          selections {
-            name,
-            odds
-          }
-        },
-        oldMarkets {
-          name,
-          selections {
-            name,
-            odds
-          }
+          odds
         }
-        startTime,
-        updatedAt
-      }
+      },
+      startTime,
+      updatedAt
     } 
   }
 `;

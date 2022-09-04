@@ -29,6 +29,7 @@ type Category {
   translations: [String]
 }
 
+# root object
 type SportScoreInfo {
   id: ID!
   startTime: String!
@@ -39,20 +40,14 @@ type SportScoreInfo {
   category: Category!
 }
 
-# root object
-type NewScoreEvent {
-  type: String!
-  payload: SportScoreInfo!
-}
-
   type Query {
-    getAllMockSportScoreData: [NewScoreEvent!]!
-    getMockSportScoreData(id: String): NewScoreEvent!
+    getAllMockSportScoreData: [SportScoreInfo!]!
+    getMockSportScoreData(id: String): SportScoreInfo!
     healthCheck: String!
   }
 
   type Subscription {
-    sportScoreDataUpdated: NewScoreEvent!
+    sportScoreDataUpdated: SportScoreInfo!
   }
 `;
 
