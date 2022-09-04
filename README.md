@@ -2,7 +2,7 @@
 
 ### UI
 
- - UI should fetches data from *graphql* server and subscribes for updates.
+ - UI fetches data from *graphql* server and subscribes for updates.
  - UI handles some edge cases.
  - It uses *Typescript* and *Apollo* client for queries and subscriptions.
 
