@@ -1,4 +1,3 @@
-- store data in db, if type = 'event-update', publish via websocket, else store in db.
 - handle edge cases on UI
 - wite unit tests for both UI & B.E.??
 - dockerize maybe???

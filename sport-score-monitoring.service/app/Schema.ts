@@ -18,36 +18,37 @@ type Markets {
 
 type Competitors {
   id: ID!
-  name: String
-  score: Int
+  name: String!
+  score: Int!
   translations: [String]
 }
 
 type Category {
   id: ID!
-  slug: String
+  slug: String!
   translations: [String]
 }
 
 type SportScoreInfo {
   id: ID!
-  startTime: String
-  updatedAt: String
+  startTime: String!
+  updatedAt: String!
   oldMarkets: [Markets]
   markets: [Markets]
-  competitors: [Competitors]
-  category: Category
+  competitors: [Competitors!]!
+  category: Category!
 }
 
 # root object
 type NewScoreEvent {
-  type: String
-  payload: SportScoreInfo
+  type: String!
+  payload: SportScoreInfo!
 }
 
   type Query {
-    getAllMockSportScoreData: [NewScoreEvent]
-    getMockSportScoreData(id: String): NewScoreEvent
+    getAllMockSportScoreData: [NewScoreEvent!]!
+    getMockSportScoreData(id: String): NewScoreEvent!
+    healthCheck: String!
   }
 
   type Subscription {

@@ -1,25 +1,19 @@
-import * as jsonData from "../../../db/recovery-snapshot.json";
-// TODO:: USE DB instead
-import Data from "../../../db/mock-data";
+import * as mock_source  from '../../../db/db.json';
 
 const NEW_DATA = 'NEW_DATA';
+
+const _source: {data: any[]} = (mock_source as  {data: any[]});
 
 const SportScoreResolvers = {
   Subscription: {
     sportScoreDataUpdated: {
-      subscribe: (parent: any, args: any, { pubsub }: any) =>  pubsub.asyncIterator(NEW_DATA)
+      subscribe: (parent: any, args: any, { pubsub }: any) => pubsub.asyncIterator(NEW_DATA)
     }
   },
   Query: {
-    getAllMockSportScoreData: (parent: any, args: any, { pubsub }: any) => {
-      pubsub.publish(NEW_DATA, {
-        sportScoreDataUpdated: Data[0]
-      });
-      return Data;
-    },
-    getMockSportScoreData: (_: any, args: any) => { 
-      return Data.find((Data) => Data.payload.id === args.id);
-    },
+    getAllMockSportScoreData: () => _source.data,
+    getMockSportScoreData: (_: any, args: any) => _source.data.find((d: any) => d.payload.id === args.id),
+    healthCheck: () => `I'm fine, thanks for asking ${{date: new Date().toISOString()}}`
   },
 };
 export default SportScoreResolvers;
