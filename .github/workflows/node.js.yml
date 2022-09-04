@@ -26,9 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: cd sport-score-monitoring.web
     - run: npm ci
     - run: cd sport-score-monitoring.web && npm run build
-    - run: cd ../ 
+    - run: cd ../
+    - run: cd sport-score-monitoring.service
+    - run: npm ci
     - run: npm run build
     - run: npm run test
+    - run: cd ../ 
     - run: cd ../ 
