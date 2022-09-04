@@ -5,8 +5,7 @@ import * as mock_source  from '../../../db/db.json';
 import WsDataService from '../services/wsDataSservice';
 
 
-const NEW_DATA = 'NEW_DATA';
-const DB_PATH = "../db/db.json";
+const NEW_DATA = process.env.NEW_DATA;
 
 const _source: {data: any[]} = (mock_source as  {data: any[]});
 
@@ -17,7 +16,7 @@ const SportScoreResolvers = {
     sportScoreDataUpdated: {
       subscribe: (parent: any, args: any, { pubsub }: any) => {
         // trigger recovery event, once client starts listening
-        // wsDataService.sendRecovery();
+        wsDataService.sendRecovery();
         return pubsub.asyncIterator(NEW_DATA);
       }
     }

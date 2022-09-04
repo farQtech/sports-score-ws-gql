@@ -21,7 +21,7 @@ const pubsub = new PubSub();
 export function listenOnWebSocket(db: any) {
   // open client connection
   const wsDataService = new WsDataService();
-  const NEW_DATA = 'NEW_DATA';
+  const NEW_DATA = process.env.WS_END_POINT;
 
   wsDataService.openConnection();
 
@@ -32,7 +32,7 @@ export function listenOnWebSocket(db: any) {
 
       // publish subscription event in case of update event.
       if (parsedData.type == "event-update") {
-        pubsub.publish(NEW_DATA, {
+        pubsub.publish(NEW_DATA as string, {
           sportScoreDataUpdated: data
         });
       }
@@ -53,7 +53,7 @@ export function listenOnWebSocket(db: any) {
  */
 export async function startApolloServer(schema: any, usePort?: number) {
 
-  const PORT_NUMBER = !!usePort && usePort > 0 ? usePort : 4000;
+  const PORT_NUMBER = process.env.PORT || (!!usePort && usePort > 0 ? usePort : 4000);
 
   const app = express();
   const httpServer = http.createServer(app);

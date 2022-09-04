@@ -6,7 +6,7 @@ class WSClient {
     public ws: WebSocket; 
     
     private constructor() { 
-        this.ws = new WebSocket('wss://sb-ws-mock-api.herokuapp.com/?username=ikram&password=secret15');
+        this.ws = new WebSocket(process.env.WS_END_POINT as string);
     }
 
     static getInstance() {
