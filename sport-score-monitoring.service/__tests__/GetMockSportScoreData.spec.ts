@@ -37,7 +37,6 @@ it("runs getMockSportScoreData query on schema", async () => {
         }`
     });
 
-    console.log('result', result)
     const queryResult = result.data.getMockSportScoreData;
     expect(queryResult).toBeTruthy();
     expect(queryResult).toHaveProperty('category');
@@ -60,3 +59,5 @@ it("runs getMockSportScoreData query on schema", async () => {
     // stop server
     server.stop();
 });
+
+afterAll(done => done());

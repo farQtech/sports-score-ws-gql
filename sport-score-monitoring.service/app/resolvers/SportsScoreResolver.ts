@@ -23,7 +23,7 @@ const SportScoreResolvers = {
   },
   Query: {
     getAllMockSportScoreData: () => _source.data.map(_ => _.payload),
-    getMockSportScoreData: (_: any, args: any) => _source.data.find((d: any) => d.id === args.id),
+    getMockSportScoreData: (_: any, args: any) =>_source.data.find((d: any) => d.payload.id === args.id).payload,
     healthCheck: () => `I'm fine, thanks for asking ${{date: new Date().toISOString()}}`
   },
 };

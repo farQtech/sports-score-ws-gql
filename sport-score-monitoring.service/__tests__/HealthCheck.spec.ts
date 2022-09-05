@@ -20,4 +20,7 @@ it("runs health check test on gql schema", async () => {
     expect(result.data.healthCheck).toContain('fine');
 
     server.stop();
+
 });
+
+afterAll(done => done());
