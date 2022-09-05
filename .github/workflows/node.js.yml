@@ -25,6 +25,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        working-directory: ./sport-score-monitoring.web
         cache: 'npm'
     - name: npm i web
       working-directory: ./sport-score-monitoring.web
