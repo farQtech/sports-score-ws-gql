@@ -12,44 +12,37 @@ it("runs getMockSportScoreData query on schema", async () => {
     const result: any = await (server).executeOperation({
         query: gql`
         query{
-            getMockSportScoreData(id: "13ebb254-7968-429e-afd1-ba0a73a6145a") {
-                  payload {
-                    category {
-                      id,
-                      slug
-                    },
-                    competitors {
-                      id, 
-                      name,
-                      score
-                    },
-                    markets {
-                      name,
-                      selections {
-                        name,
-                        odds
-                      }
-                    },
-                    oldMarkets {
-                      name,
-                      selections {
-                        name,
-                        odds
-                      }
-                    }
-                    startTime,
-                    updatedAt
+            getMockSportScoreData(id: "5959d33e-1d85-406a-b0be-583d154b4237") {
+                  category {
+      id,
+      slug
+    },
+    competitors {
+      id,
+      name,
+      score
+    },
+    markets {
+      id,
+      name,
+      selections {
+        id,
+        name,
+        odds
+      }
+    },
+    startTime,
+    updatedAt
                 }
-            }
         }`
     });
 
-    const queryResult = result.data.getMockSportScoreData.payload;
+    console.log('result', result)
+    const queryResult = result.data.getMockSportScoreData;
     expect(queryResult).toBeTruthy();
     expect(queryResult).toHaveProperty('category');
     expect(queryResult).toHaveProperty('competitors');
     expect(queryResult).toHaveProperty('markets');
-    expect(queryResult).toHaveProperty('oldMarkets');
     expect(queryResult.category).toHaveProperty('id');
     expect(queryResult.category).toHaveProperty('slug');
 
