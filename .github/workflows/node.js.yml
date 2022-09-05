@@ -25,8 +25,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        working-directory: ./sport-score-monitoring.web
         cache: 'npm'
+        cache-dependency-path: sport-score-monitoring.web/package-lock.json
     - name: npm i web
       working-directory: ./sport-score-monitoring.web
       run: npm ci
