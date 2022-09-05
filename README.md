@@ -1,5 +1,7 @@
 ## Create client-server web application to showcase some *sportsevents*
 
+[![Node.js CI](https://github.com/farQtech/sports-score-ws-gql/actions/workflows/node.js.yml/badge.svg)](https://github.com/farQtech/sports-score-ws-gql/actions/workflows/node.js.yml)
+
 ### UI
 
  - UI fetches data from *graphql* server and subscribes for updates.
