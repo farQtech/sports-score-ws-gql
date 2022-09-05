@@ -2,14 +2,8 @@ import React, { useState } from 'react';
 import './App.scss';
 import { ScoreBoard } from './components/scoreBoard';
 
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-import { SportCategories } from './components/sportCategories';
-import { ScoreCard } from './components/scoreCard';
-
 
 function App() {
-
-  const [score, setScore] = useState({});
 
   return (
     <>
