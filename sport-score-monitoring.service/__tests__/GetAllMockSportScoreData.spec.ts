@@ -60,3 +60,5 @@ it("runs getAllMockSportScoreData query on schema", async () => {
   // stop server
   server.stop();
 });
+
+afterAll(done => done());
