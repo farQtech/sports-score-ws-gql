@@ -31,7 +31,7 @@ jobs:
       working-directory: sport-score-monitoring.web
       run: | 
         npm ci
-        npm run build
+        react-scripts build
     - name: npm i service
       working-directory: sport-score-monitoring.service
       run: npm ci
