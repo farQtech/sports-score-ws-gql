@@ -28,14 +28,14 @@ jobs:
         cache: 'npm'
     - name: npm i web
       working-directory: ./sport-score-monitoring.web
-    - run: npm ci
+      run: npm ci
     - name: build web
-    - run: npm run build
+      run: npm run build
     - name: npm i service
       working-directory: ./sport-score-monitoring.service
     - name: npm i service
-    - run: npm ci
+      run: npm ci
     - name: build service
-    - run: npm run build
+      run: npm run build
     - name: test service
-    - run: npm run test
+      run: npm run test
